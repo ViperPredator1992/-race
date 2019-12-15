@@ -40,7 +40,7 @@ function startGame() {
         gameArea.appendChild(line);
     }
 
-    for (let i = 0; i < getQuantityElements(100) * setting.traffic; i++) {
+    for (let i = 0; i < getQuantityElements(100 * setting.traffic); i++) {
         const enemy = document.createElement('div');
         enemy.classList.add('enemy');
         enemy.y = -100 * setting.traffic * (i + 1);
