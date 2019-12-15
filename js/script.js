@@ -1,6 +1,7 @@
 'use strict';
 
 const score = document.querySelector('.score'),
+    highScore = document.querySelector('.highScore'),
     start = document.querySelector('.start'),
     gameArea = document.querySelector('.gameArea'),
     car = document.createElement('div');
@@ -21,6 +22,7 @@ const keys = {
 const setting = {
     start: false,
     score: 0,
+    highScore: 0,
     speed: 3,
     traffic: 3
 };
@@ -65,7 +67,9 @@ function startGame() {
 function playGame() {
     if (setting.start) {
         setting.score += setting.speed;
+        setting.highScore = Math.max(setting.score, setting.highScore);
         score.innerHTML = 'SCORE<br>' + setting.score;
+        highScore.innerHTML = 'HIGH SCORE<br>' + setting.highScore;
         moveRoad();
         moveEnemy();
         if (keys.ArrowLeft && setting.x > 0) {
