@@ -60,8 +60,6 @@ body {
     height: 100px;
     background: transparent url('../image/player.png') center/cover no-repeat;
     position: absolute;
-    left: 125px;
-    bottom: 10px;
 }
 .line {
     position: absolute;
@@ -69,4 +67,35 @@ body {
     width: 10px;
     height: 50px;
     background-color: white;
+}
+.start {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    z-index: 200;
+    padding: 2rem 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.score {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 1rem 0;
+    z-index: 100;
+    font-size: 1.5rem;
+    color: skyblue;
+    text-align: center;
+    font-weight: 500;
+    font-family: sans-serif;
+    text-align: center;
 }
